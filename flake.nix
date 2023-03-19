@@ -3,16 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
-    gptcommit = {
-      url = "github:zurawiki/gptcommit";
-      flake = false;
-    };
   };
 
   outputs = {
     self,
     nixpkgs,
-    gptcommit,
   }: let
     allSystems = [
       "x86_64-linux"
@@ -28,10 +23,15 @@
         });
   in {
     packages = forAllSystems ({pkgs}: {
-      default = pkgs.rustPlatform.buildRustPackage {
+      default = pkgs.rustPlatform.buildRustPackage rec {
         pname = "gptcommit";
         version = "0.4.0";
-        src = gptcommit;
+        src = pkgs.fetchFromGitHub {
+          owner = "zurawiki";
+          repo = pname;
+          rev = "v${version}";
+          hash = "sha256-efxN2NqXziG/XRd9NnrSROdKqh5VEckXTXlVKelOiD8=";
+        };
         meta = {
           description = "A git prepare-commit-msg hook for authoring commit messages with GPT-3.";
           homepage = "https://github.com/zurawiki/gptcommit";

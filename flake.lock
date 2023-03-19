@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "gptcommit": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1679168265,
-        "narHash": "sha256-jy87Az2XIsSftsGeetDBd7aKJ4QXGk700mmZ1F3NXqo=",
-        "owner": "zurawiki",
-        "repo": "gptcommit",
-        "rev": "e51d2e2fca57830f5110a358e6ad18c91dae132a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "zurawiki",
-        "repo": "gptcommit",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1679225441,
@@ -33,7 +17,6 @@
     },
     "root": {
       "inputs": {
-        "gptcommit": "gptcommit",
         "nixpkgs": "nixpkgs"
       }
     }

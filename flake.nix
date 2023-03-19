@@ -3,11 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
+    flake-compat,
   }: let
     allSystems = [
       "x86_64-linux"

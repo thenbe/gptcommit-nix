@@ -1,0 +1,43 @@
+{
+  "nodes": {
+    "gptcommit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1679168265,
+        "narHash": "sha256-jy87Az2XIsSftsGeetDBd7aKJ4QXGk700mmZ1F3NXqo=",
+        "owner": "zurawiki",
+        "repo": "gptcommit",
+        "rev": "e51d2e2fca57830f5110a358e6ad18c91dae132a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zurawiki",
+        "repo": "gptcommit",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1679225441,
+        "narHash": "sha256-oFJ8WP9T215rX+fGSmlNNlW8d67u3+AlI1eNfqs0lEI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ac77663c35d77d8844c85d244044bd4c5b7d2820",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "gptcommit": "gptcommit",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

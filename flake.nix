@@ -39,7 +39,10 @@
         cargoSha256 = "sha256-wvcHD2lgipy3zP1h1lV4txIO3MPUFxbTYFUT2zb7EdI=";
         nativeBuildInputs = [pkgs.pkg-config];
         buildInputs = [pkgs.openssl];
-        doCheck = false;
+        doCheck = true;
+        checkPhase = ''
+          OPENAI_API_KEY='sk-...' cargo test
+        '';
       };
     });
   };
